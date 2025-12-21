@@ -93,3 +93,78 @@ console.log(
     `%cShaadi me zaroor aana!\n\n`,
     'color: yellow; background:tomato; font-size: 24pt; font-weight: bold',
 )
+
+/* ===== Our Journey: dynamic timeline ===== */
+(function(){
+    // Simple data for the timeline — edit these entries to add more moments
+    var journey = [
+        {date: '2019-06', title: 'Met for the first time', desc: 'We crossed paths at a mutual friend\'s gathering and had tea that turned into a three-hour conversation.', img: 'https://i.imgur.com/8Km9tLL.jpg'},
+        {date: '2020-11', title: 'First trip together', desc: 'A small weekend getaway where we got to know each other better.', img: 'https://i.imgur.com/4AiXzf8.jpg'},
+        {date: '2022-02', title: 'Said yes', desc: 'A cozy evening and a question that changed everything.', img: 'https://i.imgur.com/1y0QFqK.jpg'},
+        {date: '2024-08', title: 'Planning begins', desc: 'Excitedly planning the big day with family.', img: ''}
+    ];
+
+    function renderTimeline() {
+        var container = document.getElementById('timeline');
+        if(!container) return;
+        container.innerHTML = '';
+        journey.forEach(function(item, idx){
+            var el = document.createElement('article');
+            el.className = 'timeline-item';
+
+            var dot = document.createElement('div');
+            dot.className = 'dot';
+
+            var img = '';
+            if(item.img){
+                img = '<img src="'+item.img+'" alt="'+(item.title||'')+'"/>';
+            }
+
+            var content = document.createElement('div');
+            content.className = 'content';
+            content.innerHTML = '<h3>'+item.title+'</h3><time>'+item.date+'</time><p>'+item.desc+'</p>';
+
+            if(item.img){
+                el.innerHTML = '<div class="dot"></div>'+img+'';
+                el.appendChild(content);
+            } else {
+                el.appendChild(dot);
+                el.appendChild(content);
+            }
+
+            // simple reveal animation with small delay
+            setTimeout(function(){ el.classList.add('show'); }, 120*idx);
+
+            container.appendChild(el);
+        });
+    }
+
+    // Toggle music play/pause
+    function setupMusicToggle(){
+        var btn = document.getElementById('toggle-music');
+        var audio = document.getElementById('my_audio');
+        if(!btn || !audio) return;
+        var playing = false;
+        btn.addEventListener('click', function(){
+            if(playing){ audio.pause(); btn.textContent = 'Play Music'; }
+            else { audio.play(); btn.textContent = 'Pause Music'; }
+            playing = !playing;
+        });
+    }
+
+    // Show all simply re-runs rendering (placeholder for filters)
+    function setupShowAll(){
+        var btn = document.getElementById('show-all');
+        if(!btn) return;
+        btn.addEventListener('click', function(){
+            renderTimeline();
+        });
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', function(){
+        renderTimeline();
+        setupMusicToggle();
+        setupShowAll();
+    });
+})();

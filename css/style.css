@@ -577,3 +577,88 @@ a {
 	font-size: 12px;
 	letter-spacing: 0pt;
 }
+
+/* Our Journey / timeline styles */
+.journey {
+	width: 100%;
+	max-width: 900px;
+	margin: 24px auto;
+	padding: 20px;
+	background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.9));
+	border-radius: 12px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.journey-wrap h2 {
+	font-family: 'Dancing Script', cursive;
+	font-size: 40px;
+	color: #674ea7;
+	margin: 0 0 8px 0;
+	text-align: center;
+}
+.journey .lead {
+	text-align: center;
+	color: #564861;
+	margin-bottom: 18px;
+}
+.timeline {
+	display: flex;
+	flex-direction: column;
+	gap: 14px;
+}
+.timeline-item {
+	display: flex;
+	gap: 12px;
+	align-items: flex-start;
+	padding: 12px;
+	border-radius: 8px;
+	background: #fff;
+	transition: transform .28s ease, box-shadow .28s ease, opacity .28s ease;
+	box-shadow: 0 3px 8px rgba(0,0,0,0.04);
+	opacity: 0;
+	transform: translateY(10px);
+}
+.timeline-item.show {
+	opacity: 1;
+	transform: translateY(0);
+}
+.timeline-item .dot {
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background: #e25c67;
+	flex: 0 0 12px;
+	margin-top: 8px;
+}
+.timeline-item .content {
+	flex: 1 1 auto;
+}
+.timeline-item .content h3 {
+	margin: 0 0 6px 0;
+	font-size: 16px;
+	color: #674ea7;
+}
+.timeline-item .content time {
+	display: block;
+	font-size: 13px;
+	color: #999;
+	margin-bottom: 6px;
+}
+.timeline-item .content p {
+	margin: 0;
+	color: #333;
+}
+.timeline-item img {
+	width: 90px;
+	height: 64px;
+	object-fit: cover;
+	border-radius: 6px;
+	flex: 0 0 90px;
+}
+.journey-actions { text-align: center; margin-top: 16px }
+.btn { background:#674ea7; color:#fff; border:none; padding:8px 12px; border-radius:6px; cursor:pointer; margin:0 6px }
+.btn.secondary { background:#e25c67 }
+
+@media (max-width:700px) {
+	.timeline-item { flex-direction: column; align-items: stretch }
+	.timeline-item img { width:100%; height:160px }
+}

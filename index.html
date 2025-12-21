@@ -6,7 +6,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
    <meta name="description"
-      content="With the divine grace of the almighty, inviting you and your family to Madhumita & Piyush's wedding to be held on 21st April 2026 at Varanasi from 7:00 PM onwards.">
+      content="With the divine grace of the almighty, inviting you and your family to Madhumita & Piyush's wedding to be held on 21st April 2026 at Varanasi from 7:00 AM onwards.">
 
    <meta name="author" content="Piyush Tripathy">
    <meta name="copyright" content="Piyush Tripathy 2026" />
@@ -14,7 +14,7 @@
    <meta property="og:type" content="website" />
    <meta property="og:title" content="Wedding Invitation | 21st April 2026 | Varanasi" />
    <meta property="og:description"
-      content="With the divine grace of the almighty, inviting you and your family to Madhumita & Piyush's wedding to be held on 21st April 2026 at Varanasi from 7:00 PM onwards." />
+      content="With the divine grace of the almighty, inviting you and your family to Madhumita & Piyush's wedding to be held on 21st April 2026 at Varanasi from 7:00 AM onwards." />
    <meta property="og:image" content="favicon.png" />
    <meta property="og:site_name" content="Madhumita & Piyush Wedding" />
 
@@ -34,8 +34,13 @@
 <body>
    <div class="sakura-falling"></div>
 
-   <img src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
-   <img src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
+   <img id="decor-right" src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
+   <img id="decor-left" src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
+
+   <!-- Ganesh logo (inline SVG for crisp scaling) -->
+   <div class="ganesh" aria-hidden="true">
+      <img src="./assets/Ganesha.png" alt="Ganesh logo" class="ganesh-img"/>
+   </div>
 
    <section id="media"></section>
 
@@ -54,45 +59,38 @@
       </div>
    </div>
 
+   <!-- Ceremonies: Haldi & Mehndi -->
+   <section id="ceremonies" class="ceremonies">
+        <div class="ceremony mehndi">
+         <h2>Mehndi Ceremony</h2>
+         <p>Come celebrate with colors, mehndi designs and music.</p>
+         <div class="details"><strong>Date:</strong> 20 April 2026 &nbsp; • &nbsp; <strong>Time:</strong> 12:00 PM (or 1:00 PM — to be confirmed) &nbsp; • &nbsp; <strong>Venue:</strong> <em>To be confirmed</em></div>
+         <img src="https://picsum.photos/seed/mehndi/800/500" alt="Mehndi"/>
+      </div>
+      <div class="ceremony haldi">
+         <h2>Haldi Ceremony</h2>
+         <p>Join us for the Haldi ceremony — turmeric, laughter and blessings.</p>
+         <div class="details"><strong>Date:</strong> 20 April 2026 &nbsp; • &nbsp; <strong>Time:</strong> 6:00 PM onwards &nbsp; • &nbsp; <strong>Venue:</strong> <em>To be confirmed</em></div>
+         <img src="https://picsum.photos/seed/haldi/800/500" alt="Haldi"/>
+      </div>
+    
+   </section>
+
    <div id="time"></div>
 
-   <p class="dance-med">
-      dinner & dancing to follow
-   </p>
-
-   <div class="actions">
-      <a href="https://www.google.com/maps/place/Varanasi" target="_blank">
-         <div class="venue">SEE THE VENUE</div>
-      </a>
-   </div>
-
-   <p class="footer">
-      Can't wait to celebrate this auspicious moment with you! <br>
-      With love, Madhumita & Piyush
-   </p>
-
    <div class="music">
-      <audio src="./assets/mp3/song.mp3" id="my_audio" loop="loop"></audio> 
+      <audio src="./assets/mp3/song.mp3" id="my_audio" loop="loop"></audio>
    </div>
 
-   <p class="happiness">
-      Join us in our happiness!
-   </p>
 
-   <!-- Our Journey: dynamically rendered timeline -->
-   <section id="journey" class="journey">
-      <div class="journey-wrap">
-         <h2>Our Journey</h2>
-         <p class="lead">Moments that brought us together — a short timeline of our favourite memories.</p>
-
-         <div id="timeline" class="timeline" aria-live="polite"></div>
-
-         <div class="journey-actions">
-            <button id="toggle-music" class="btn">Play Music</button>
-            <button id="show-all" class="btn secondary">Show All</button>
+      <!-- Reception block (placeholder — update venue/time as needed) -->
+      <section class="reception" aria-label="Reception">
+         <div class="reception-wrap">
+            <h2>Reception</h2>
+            <p class="details"><strong>Date:</strong> 21 April 2026 &nbsp; • &nbsp; <strong>Time:</strong> 9:00 PM onwards &nbsp; • &nbsp; <strong>Venue:</strong> <em>Dolphin Restaurent</em></p>
+            <img src="https://picsum.photos/seed/reception/900/360" alt="Reception"/>
          </div>
-      </div>
-   </section>
+      </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js"></script>
    <script src="./js/script.js"></script>

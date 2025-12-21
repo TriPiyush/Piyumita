@@ -168,3 +168,32 @@ console.log(
         setupShowAll();
     });
 })();
+
+/* Flower switcher: change decorative images (left/right) */
+(function(){
+    function setDecor(leftSrc, rightSrc){
+        var left = document.getElementById('decor-left');
+        var right = document.getElementById('decor-right');
+        if(left && leftSrc) left.src = leftSrc;
+        if(right && rightSrc) right.src = rightSrc;
+    }
+
+    function setupFlowerSwitcher(){
+        var buttons = document.querySelectorAll('.flower-btn');
+        if(!buttons || !buttons.length) return;
+        buttons.forEach(function(btn){
+            btn.addEventListener('click', function(e){
+                buttons.forEach(function(b){ b.classList.remove('active'); });
+                btn.classList.add('active');
+                var left = btn.getAttribute('data-left');
+                var right = btn.getAttribute('data-right');
+                setDecor(left, right);
+            });
+        });
+        // Activate first button by default
+        var first = buttons[0];
+        if(first) first.click();
+    }
+
+    document.addEventListener('DOMContentLoaded', setupFlowerSwitcher);
+})();

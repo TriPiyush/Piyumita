@@ -680,7 +680,7 @@ a {
 }
 
 .ceremonies { display:flex; gap:18px; max-width:1000px; margin: 18px auto; padding: 12px; justify-content: center; align-items: flex-start }
-.ceremony { background: #fff; border-radius: 10px; padding: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); width: 48%; text-align: center }
+.ceremony { background: #fff; border-radius: 10px; padding: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.06); width: 47%; text-align: center }
 .ceremony h2 { font-family: 'Dancing Script', cursive; color:#e25c67; margin-bottom:6px }
 .ceremony img { width:100%; height:180px; object-fit:cover; border-radius:6px; margin-top:8px }
 .ceremony .details { color:#564861; font-size:14px; margin-top:6px }

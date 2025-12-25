@@ -1,2 +1,0 @@
-# Piyumita
-wedding website

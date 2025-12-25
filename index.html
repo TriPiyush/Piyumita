@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-   <link rel="shortcut icon" href="favicon.png" type="image/png"> 
+   <link rel="shortcut icon" href="favicon.png" type="image/png">
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -35,11 +36,11 @@
    <div class="sakura-falling"></div>
 
    <img id="decor-right" src="https://i.imgur.com/dGOOfnA.png" alt="image-top-right" class="top-right-decoration">
-   <img id="decor-left" src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration"> 
+   <img id="decor-left" src="https://i.imgur.com/t6ffnbn.png" alt="image-top-left" class="top-left-decoration">
 
    <!-- Ganesh logo (inline SVG for crisp scaling) -->
    <div class="ganesh" aria-hidden="true">
-      <img src="./assets/Ganesha.png" alt="Ganesh logo" class="ganesh-img"/>
+      <img src="./assets/Ganesha.png" alt="Ganesh logo" class="ganesh-img" />
    </div>
 
    <section id="media"></section>
@@ -53,7 +54,7 @@
          <h3>Are getting married</h3>
 
          <p>
-            on <span class="date">21 April 2026</span>,  
+            on <span class="date">21 April 2026</span>,
             at <span class="place">Varanasi</span>
          </p>
       </div>
@@ -61,38 +62,52 @@
 
    <!-- Ceremonies: Haldi & Mehndi -->
    <section id="ceremonies" class="ceremonies">
-        <div class="ceremony mehndi">
+      <div class="ceremony mehndi">
          <h2>Mehndi Ceremony</h2>
-         <p>Come celebrate with colors, mehndi designs and music.</p>
-         <div class="details"><strong>Date:</strong> 20 April 2026 &nbsp; • &nbsp; <strong>Time:</strong> 12:00 PM (or 1:00 PM — to be confirmed) &nbsp; • &nbsp; <strong>Venue:</strong> <em>To be confirmed</em></div>
-         <img src="https://picsum.photos/seed/mehndi/800/500" alt="Mehndi"/>
+         <p>Colors, mehndi designs and music.</p>
+         <div class="details"><strong>Date:</strong> 20 April &nbsp; • &nbsp; <strong>Time:</strong> 12:00 PM
+            &nbsp; • &nbsp; <strong>Venue:</strong> <em>Hotel Sahu</em></div>
+         <img src="https://picsum.photos/seed/mehndi/800/500" alt="Mehndi" />
       </div>
       <div class="ceremony haldi">
          <h2>Haldi Ceremony</h2>
-         <p>Join us for the Haldi ceremony — turmeric, laughter and blessings.</p>
-         <div class="details"><strong>Date:</strong> 20 April 2026 &nbsp; • &nbsp; <strong>Time:</strong> 6:00 PM onwards &nbsp; • &nbsp; <strong>Venue:</strong> <em>To be confirmed</em></div>
-         <img src="https://picsum.photos/seed/haldi/800/500" alt="Haldi"/>
+         <p>Turmeric, laughter and blessings.</p>
+         <div class="details"><strong>Date:</strong> 20 April &nbsp; • &nbsp; <strong>Time:</strong> 6:00 PM
+            &nbsp; • &nbsp; <strong>Venue:</strong> <em>Hotel Sahu</em></div>
+         <img src="https://picsum.photos/seed/haldi/800/500" alt="Haldi" />
       </div>
-    
-   </section>
 
+   </section>
+  <!-- Reception block (placeholder — update venue/time as needed) -->
+   <section class="reception" aria-label="Reception">
+      <div class="reception-wrap">
+         <h2>Reception</h2>
+         <p class="details"><strong>Date:</strong> 21 April 2026 &nbsp; • &nbsp; <strong>Time:</strong> 9:00 PM onwards
+            &nbsp; • &nbsp; <strong>Venue:</strong> <em>Dolphin Restaurent</em></p>
+         <img src="https://picsum.photos/seed/reception/900/360" alt="Reception" />
+      </div>
+   </section>
    <div id="time"></div>
 
    <div class="music">
       <audio src="./assets/mp3/song.mp3" id="my_audio" loop="loop"></audio>
    </div>
-
-
-      <!-- Reception block (placeholder — update venue/time as needed) -->
-      <section class="reception" aria-label="Reception">
-         <div class="reception-wrap">
-            <h2>Reception</h2>
-            <p class="details"><strong>Date:</strong> 21 April 2026 &nbsp; • &nbsp; <strong>Time:</strong> 9:00 PM onwards &nbsp; • &nbsp; <strong>Venue:</strong> <em>Dolphin Restaurent</em></p>
-            <img src="https://picsum.photos/seed/reception/900/360" alt="Reception"/>
-         </div>
-      </section>
+   <p class="dance-med">
+      dinner & dancing to follow
+   </p>
+   <div class="actions">
+      <a href="https://www.google.com/maps/dir/Hotel+Sahu,+Varanasi/Kashiraj+Kali+Mandir+-+Gautameshwar+Mahadev+-+Kashi+Khand/Kesariya+Thal+-+Luxa,+Varanasi" target="_blank">
+         <div class="venue">SEE THE VENUE</div>
+      </a>
+      <a href="https://github.com/vinitshahdeo/vinitshahdeo/raw/master/docs/Sonali%20%26%20Gagan.pdf"
+         download="Invitation | 21 April | Hope to see you there!">
+         <div class="venue">DOWNLOAD INVITATION CARD</div>
+      </a>
+   </div>
+ 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <script src="https://cdn.jsdelivr.net/gh/timoschaefer/jQuery-Sakura/jquery-sakura.min.js"></script>
    <script src="./js/script.js"></script>
 </body>
+
 </html>
